@@ -1,0 +1,76 @@
+name: to_do_project
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.6
+  shared_preferences: ^2.1.2
+  flutter_screenutil: ^5.8.4
+  zoom_tap_animation: ^1.1.0
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+     - assets/images/
+     - assets/svg/
+
+  fonts:
+     - family: GalanoGrotesque-Medium
+       fonts:
+         - asset: assets/fonts/GalanoGrotesque-Black.ttf
+         - asset: assets/fonts/GalanoGrotesque-BlackItalic.ttf
+         - asset: assets/fonts/GalanoGrotesque-Bold.ttf
+         - asset: assets/fonts/GalanoGrotesque-BoldItalic.ttf
+         - asset: assets/fonts/GalanoGrotesque-ExtraBold.ttf
+         - asset: assets/fonts/GalanoGrotesque-ExtraBoldItalic.ttf
+         - asset: assets/fonts/GalanoGrotesque-ExtraLight.ttf
+         - asset: assets/fonts/GalanoGrotesque-ExtraLightItalic.ttf
+         - asset: assets/fonts/GalanoGrotesque-Heavy.ttf
+         - asset: assets/fonts/GalanoGrotesque-HeavyItalic.ttf
+         - asset: assets/fonts/GalanoGrotesque-Italic.ttf
+         - asset: assets/fonts/GalanoGrotesque-Light.ttf
+         - asset: assets/fonts/GalanoGrotesque-LightItalic.ttf
+         - asset: assets/fonts/GalanoGrotesque-Medium.ttf
+         - asset: assets/fonts/GalanoGrotesque-MediumItalic.ttf
+         - asset: assets/fonts/GalanoGrotesque-SemiBold.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Black.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-BlackItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Bold.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-BoldItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-ExtraBold.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-ExtraBoldItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-ExtraLight.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-ExtraLightItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Heavy.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-HeavyItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Italic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Light.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-LightItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Medium.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-MediumItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Regular.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-SemiBold.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-SemiBoldItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-Thin.ttf
+         - asset: assets/fonts/GalanoGrotesqueAlt-ThinItalic.ttf
+         - asset: assets/fonts/GalanoGrotesqueAltDEMO-Bold.ttf
+         - asset: assets/fonts/GalanoGrotesqueDEMO-Bold.ttf
