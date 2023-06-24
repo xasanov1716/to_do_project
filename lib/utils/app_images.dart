@@ -18,6 +18,7 @@ class AppImages{
   static const String activeTask = 'assets/svg/activeTask.svg';
   static const String activeProfile = 'assets/svg/activeProfile.svg';
   static const String activeCalendar = 'assets/svg/activeCalendar.svg';
+  static const String activeMenu = 'assets/svg/activeMenu.svg';
 
 
   //png

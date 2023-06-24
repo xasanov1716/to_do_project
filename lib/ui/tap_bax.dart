@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:to_do_project/ui/calendar/calendar_screen.dart';
 import 'package:to_do_project/ui/home/home_screen.dart';
@@ -46,7 +45,7 @@ int tapIndex = 0;
           });
         },
         items: [
-          getBottomNavItem(activeIcon: AppImages.menu, icon: AppImages.menu, label: 'Menu'),
+          getBottomNavItem(activeIcon: AppImages.activeMenu, icon: AppImages.menu, label: 'Menu'),
           getBottomNavItem(activeIcon: AppImages.activeTask, icon: AppImages.task, label: 'Task'),
           getBottomNavItem(activeIcon: AppImages.activeCalendar, icon: AppImages.calendar, label: 'Calendar'),
           getBottomNavItem(activeIcon: AppImages.activeProfile, icon: AppImages.profile, label: 'Profile'),
