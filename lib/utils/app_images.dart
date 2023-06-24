@@ -15,6 +15,8 @@ class AppImages{
   static const String settings = 'assets/svg/settings.svg';
   static const String share = 'assets/svg/share.svg';
   static const String task = 'assets/svg/task.svg';
+  static const String galichka = 'assets/svg/galichka.svg';
+
 
 
   //png
