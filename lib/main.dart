@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_project/ui/home/home_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:to_do_project/ui/settings/settings_screen.dart';
 import 'package:to_do_project/ui/tap_bax.dart';
 
 
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
     builder: (context , child) {
           return const MaterialApp(
             debugShowCheckedModeBanner: false,
-          home: TapBax(),
+          home: SettingsScreen(),
           );
     });
   }
