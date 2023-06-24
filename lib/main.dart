@@ -4,6 +4,7 @@ import 'package:to_do_project/ui/tap_bax.dart';
 
 
 void main(){
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const App());
 }
 
@@ -14,9 +15,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
         designSize: const Size(375, 812),
-    minTextAdapt: true,
-    splitScreenMode: true,
-    builder: (context , child) {
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context , child) {
           return const MaterialApp(
             debugShowCheckedModeBanner: false,
             home: TapBax(),

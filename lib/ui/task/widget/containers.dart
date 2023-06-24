@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:to_do_project/utils/app_colors.dart';
 
+// ignore: must_be_immutable
 class MyContainer extends StatelessWidget {
   MyContainer({super.key,required this.active});
   bool active;
