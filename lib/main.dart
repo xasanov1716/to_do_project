@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_project/ui/Login_Screen/loginScreen_1.dart';
-import 'package:to_do_project/ui/home/home_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:to_do_project/ui/tap_bax.dart';
-
 
 void main(){
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,15 +14,15 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(375, 812),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (context , child) {
-          return const MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: TapBax(),
-          home:LoginScreen_1 (),
-          );
-    });
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: TapBax(),
+        );
+      },
+    );
   }
 }
