@@ -17,7 +17,7 @@ class App extends StatelessWidget {
         designSize: const Size(375, 812),
         minTextAdapt: true,
         splitScreenMode: true,
-        builder: (context , child) {
+        builder: (context, child) {
           return const MaterialApp(
             debugShowCheckedModeBanner: false,
             home: TapBax(),
