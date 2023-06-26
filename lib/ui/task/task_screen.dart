@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:to_do_project/ui/task/task_add/task_add_screen.dart';
 import 'package:to_do_project/ui/task/widget/behind_schedule_list_view.dart';
 import 'package:to_do_project/ui/task/widget/containers.dart';
 import 'package:to_do_project/ui/task/widget/upcoming_list_view.dart';
@@ -30,6 +31,7 @@ class _TaskScreenState extends State<TaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: AppColors.white,
       appBar: AppBar(
         systemOverlayStyle: const SystemUiOverlayStyle(statusBarColor: AppColors.white),
@@ -42,7 +44,8 @@ class _TaskScreenState extends State<TaskScreen> {
               const Text('ToDo',style: TextStyle(
                 color: AppColors.C_2563EB,
                 fontWeight: FontWeight.w700
-              ),),
+                ),
+              ),
             ],
           ),
         ),
@@ -157,19 +160,25 @@ class _TaskScreenState extends State<TaskScreen> {
                 ),
               ],
             ),
-            Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(height: 247.h,),
-                      active==1 ? const Upcoming():const BehindSchedule(),
-                    ],
-                  ),
+            SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 247.h,),
+                  active==1 ? const Upcoming():const BehindSchedule(),
+                ],
               ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const TaskAddScreen()));
+        },
+        backgroundColor: AppColors.white,
+        child: Image.asset(AppImages.add),
       ),
     );
   }
