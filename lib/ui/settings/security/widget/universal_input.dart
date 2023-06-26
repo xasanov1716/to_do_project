@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:to_do_project/utils/app_colors.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 
 class UniversalInputView extends StatefulWidget {
   const UniversalInputView({
     Key? key,
-    required this.caption,
     required this.hintText,
     required this.inputType,
     this.isStudentId = false,
-    required this.obscureText, required this.onChanged,
+ required this.onChanged,
   }) : super(key: key);
 
 
   final ValueChanged onChanged;
   final String hintText;
   final bool isStudentId;
-  final bool obscureText;
   final TextInputType inputType;
 
   @override
@@ -24,15 +25,18 @@ class UniversalInputView extends StatefulWidget {
 
 class _UniversalInputViewState extends State<UniversalInputView> {
   final TextEditingController textController = TextEditingController();
-
+  bool check = false;
   @override
   void initState() {
-    textController.addListener(() {});
+    textController.addListener(() {
+
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       margin: const EdgeInsets.symmetric(
         horizontal: 24,
@@ -41,18 +45,10 @@ class _UniversalInputViewState extends State<UniversalInputView> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            widget.caption,
-            style:  TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w500,
-              color: AppColor.C_FFFFFF,
-            ),
-          ),
           const SizedBox(height: 8),
           TextField(
             onChanged: widget.onChanged,
-            obscureText: widget.obscureText,
+            obscureText: check,
             controller: textController,
             keyboardType: widget.inputType,
             textInputAction: TextInputAction.done,
@@ -60,41 +56,44 @@ class _UniversalInputViewState extends State<UniversalInputView> {
             style:  TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w500,
-              color: AppColor.C_FFFFFF,
+              color: AppColors.C_202D41,
             ),
             decoration: InputDecoration(
+              suffixIcon: check ? ZoomTapAnimation(onTap: (){check = true;setState(() {
+
+              });},child: const Icon(Icons.visibility)) : ZoomTapAnimation(onTap: (){},child: Icon(Icons.visibility_off_sharp)),
               contentPadding: const EdgeInsets.symmetric(
                 horizontal: 12,
                 vertical: 16,
               ),
               hintText: widget.hintText,
-              hintStyle: const TextStyle(
+              hintStyle:  TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
-                color: Colors.grey,
+                color: AppColors.C_202D41.withOpacity(0.5),
               ),
-              fillColor: AppColor.C_0C042E,
+              fillColor: AppColors.white,
               filled: true,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(32),
                   borderSide:
-                  const BorderSide(width: 1, color: Color(0xFFCBD5E1))),
+                  const BorderSide(width: 1, color: Color(0xFFE2E4E7))),
               disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
+                  borderRadius: BorderRadius.circular(10),
                   borderSide:
-                  const BorderSide(width: 1, color: Color(0xFFCBD5E1))),
+                  const BorderSide(width: 1, color: AppColors.C_202D41)),
               focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
+                  borderRadius: BorderRadius.circular(10),
                   borderSide:
-                  const BorderSide(width: 1, color: Color(0xFFCBD5E1))),
+                  const BorderSide(width: 1, color: AppColors.white)),
               errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
+                  borderRadius: BorderRadius.circular(10),
                   borderSide:
-                  const BorderSide(width: 1, color: Color(0xFFCBD5E1))),
+                  const BorderSide(width: 1, color: AppColors.white)),
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(32),
                   borderSide:
-                  const BorderSide(width: 1, color: Color(0xFFCBD5E1))),
+                  const BorderSide(width: 1, color: AppColors.white)),
             ),
           )
         ],

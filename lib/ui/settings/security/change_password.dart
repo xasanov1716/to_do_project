@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_project/ui/settings/security/security_screen.dart';
+import 'package:to_do_project/ui/settings/security/widget/universal_input.dart';
 
 
 class ChangePasswordScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
       ),
       body: Column(
         children: [
-          
+          UniversalInputView(hintText: 'New Password', inputType: TextInputType.visiblePassword,onChanged: (v){})
         ],
       ),
     );
