@@ -157,19 +157,20 @@ class _TaskScreenState extends State<TaskScreen> {
                 ),
               ],
             ),
-            Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(height: 247.h,),
-                      active==1 ? const Upcoming():const BehindSchedule(),
-                    ],
-                  ),
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 247.h,),
+                active==1 ? const Upcoming():const BehindSchedule(),
+              ],
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        backgroundColor: AppColors.C_2563EB,
+        child: const Text('+',style: TextStyle(fontSize: 35,fontFamily: 'GalanoGrotesque-Medium'),),
       ),
     );
   }
