@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:to_do_project/utils/app_colors.dart';
 
-class Onpressed extends StatelessWidget {
-  const Onpressed({Key? key, required this.onTap, required this.text})
+class OnPressed extends StatelessWidget {
+  const OnPressed({Key? key, required this.onTap, required this.text})
       : super(key: key);
   final VoidCallback onTap;
   final String text;

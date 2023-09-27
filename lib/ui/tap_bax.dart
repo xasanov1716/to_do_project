@@ -7,14 +7,14 @@ import 'package:to_do_project/ui/task/task_screen.dart';
 import 'package:to_do_project/utils/app_colors.dart';
 import 'package:to_do_project/utils/app_images.dart';
 
-class TapBax extends StatefulWidget {
-  const TapBax({Key? key}) : super(key: key);
+class TabBox extends StatefulWidget {
+  const TabBox({Key? key}) : super(key: key);
 
   @override
-  State<TapBax> createState() => _TapBaxState();
+  State<TabBox> createState() => _TabBoxState();
 }
 
-class _TapBaxState extends State<TapBax> {
+class _TabBoxState extends State<TabBox> {
 
 
 List<Widget> screens = [];

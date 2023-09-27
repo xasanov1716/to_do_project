@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:to_do_project/ui/Login_Screen/wigets/Butom.dart';
-import 'package:to_do_project/ui/Login_Screen/wigets/signAp1.dart';
 import 'package:to_do_project/ui/Login_Screen/wigets/signApp.dart';
 import 'package:to_do_project/ui/Login_Screen/wigets/tetxtfiled.dart';
 import 'package:to_do_project/ui/Login_Screen/wigets/textfieled1.dart';
-import 'package:to_do_project/ui/Login_Screen/wigets/todologo.dart';
 import 'package:to_do_project/utils/app_colors.dart';
 import 'package:to_do_project/utils/app_images.dart';
 
 import '../tap_bax.dart';
 
+// ignore: camel_case_types
 class LoginScreen_1 extends StatefulWidget {
   const LoginScreen_1({Key? key}) : super(key: key);
 
@@ -19,11 +18,11 @@ class LoginScreen_1 extends StatefulWidget {
   State<LoginScreen_1> createState() => _LoginScreen_1State();
 }
 
+// ignore: camel_case_types
 class _LoginScreen_1State extends State<LoginScreen_1> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: AppColors.white,
       body: Container(
@@ -50,10 +49,10 @@ class _LoginScreen_1State extends State<LoginScreen_1> {
             SizedBox(
               height: 40.h,
             ),
-            Onpressed(
+            OnPressed(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return TapBax();
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const TabBox();
                 }));
               },
               text: 'Log In',
@@ -61,7 +60,9 @@ class _LoginScreen_1State extends State<LoginScreen_1> {
             SizedBox(
               height: 34.1.h,
             ),
-            SignUp(onTap: () {},),
+            SignUp(
+              onTap: () {},
+            ),
           ],
         ),
       ),
